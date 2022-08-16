@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/naxmefy/gd/pkg/cmd"
 	"github.com/urfave/cli/v2"
 	"log"
 	"os"
@@ -11,7 +12,16 @@ func main() {
 		Name:     "gd",
 		Usage:    "CLI helper for godot devs",
 		Version:  "0.0.1",
-		Commands: []*cli.Command{},
+		HideHelp: true,
+		Commands: []*cli.Command{
+			cmd.Alias(),
+			cmd.Addon(),
+			cmd.Completion(),
+			cmd.Config(),
+			cmd.Editor(),
+			cmd.Extension(),
+			cmd.Store(),
+		},
 	}
 
 	err := app.Run(os.Args)
