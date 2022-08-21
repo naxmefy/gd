@@ -74,13 +74,7 @@ It searches in following locations:
 - `./..`
 - `./../../` (til the root of the volume)
 
-<div 
-  class="warning" 
-  style="background-color:#1b4c8e; color:#69337A; border-left: solid #5a8fd5 4px; border-radius: 4px; padding:0.7em;"
->
-
-> If the executed `gd` command would change the `project.toml` file like installing a dependency
+> :warning: If the executed `gd` command would change the `project.toml` file like installing a dependency
 > and there is no `project.toml` file - the command will create a new `project.toml` file and
 > add the expected changes from the command.
 
-</div>
