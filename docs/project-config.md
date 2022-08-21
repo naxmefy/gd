@@ -8,7 +8,7 @@ It searches for a `project.toml` file the directory hierarchy up.
 
 Here an example. Based on this folder structure (`monorepo-with-game`).
 
-```bash
+```
 monorepo-with-game/
 |-- .github
 |   |-- ISSUE_TEMPLATES
