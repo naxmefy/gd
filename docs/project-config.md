@@ -8,6 +8,9 @@ It searches for a `project.toml` file the directory hierarchy up.
 
 Here an example. Based on this folder structure (`monorepo-with-game`).
 
+<details><summary>example project tree</summary>
+<p>
+
 ```
 monorepo-with-game/
 |-- .github
@@ -44,6 +47,9 @@ monorepo-with-game/
     `-- styles
 ```
 
+</p>
+</details>
+
 We have a repository with a game folder and other folders for others aspects of our game. 
 E.g. `marketing-functions` and a `website` for the game (maybe a github-page).
 
@@ -55,7 +61,7 @@ It searches in following locations:
 - `game/assets/`
 - `game/` (and will find the `project.toml` here)
 
-> The `project.toml` file may get validated by the executed `gd` command. If the
+> :warning: The `project.toml` file may get validated by the executed `gd` command. If the
 > `project.toml` file is not valid the command will file with an error.
 
 If the `current working directory` is `website/src` and we execute a project related
@@ -68,7 +74,13 @@ It searches in following locations:
 - `./..`
 - `./../../` (til the root of the volume)
 
+<div 
+  class="warning" 
+  style="background-color:#1b4c8e; color:#69337A; border-left: solid #5a8fd5 4px; border-radius: 4px; padding:0.7em;"
+>
+
 > If the executed `gd` command would change the `project.toml` file like installing a dependency
 > and there is no `project.toml` file - the command will create a new `project.toml` file and
 > add the expected changes from the command.
 
+</div>
